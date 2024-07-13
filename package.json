@@ -2,23 +2,27 @@
   "name": "tomkit",
   "main": "expo-router/entry",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "ios": "expo run:ios",
+    "android": "expo run:android",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "reset-project": "node ./scripts/reset-project.js"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/native": "^6.0.2",
     "expo": "~51.0.20",
     "expo-constants": "~16.0.2",
+    "expo-dev-client": "~4.0.20",
     "expo-font": "~12.0.8",
     "expo-linking": "~6.3.1",
     "expo-router": "~3.5.18",
@@ -26,6 +30,8 @@
     "expo-status-bar": "~1.12.1",
     "expo-system-ui": "~3.0.7",
     "expo-web-browser": "~13.0.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
@@ -37,6 +43,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@biomejs/biome": "1.8.3",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.2.45",
     "@types/react-test-renderer": "^18.0.7",
@@ -45,5 +52,14 @@
     "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
   },
-  "private": true
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "lint-staged": {
+    "**/*.+(js|jsx|ts|tsx)": [
+      "bunx @biomejs/biome lint --apply",
+      "bunx @biomejs/biome format --write"
+    ],
+    "**/*.+(json|md|mdx)": ["bunx @biomejs/biome format --write"]
+  }
 }
