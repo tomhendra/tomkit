@@ -52,14 +52,14 @@
     "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
   },
-  "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
-  },
   "lint-staged": {
     "**/*.+(js|jsx|ts|tsx)": [
       "bunx @biomejs/biome lint --apply",
       "bunx @biomejs/biome format --write"
     ],
     "**/*.+(json|md|mdx)": ["bunx @biomejs/biome format --write"]
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
   }
 }
