@@ -7,7 +7,15 @@
     "defaultBranch": "main"
   },
   "files": {
-    "ignoreUnknown": true
+    "ignoreUnknown": true,
+    "ignore": [
+      ".expo/*",
+      ".husky/*",
+      "android/*",
+      "ios/*",
+      "node_modules/*",
+      "bun.lockb"
+    ]
   },
   "organizeImports": {
     "enabled": true

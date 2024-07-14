@@ -4,12 +4,28 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "expo start",
-    "ios": "expo run:ios",
-    "android": "expo run:android",
+    "ios": "APP_VARIANT=development expo run:ios",
+    "android": "APP_VARIANT=development expo run:android",
     "web": "expo start --web",
+    "web:serve": "bunx serve dist --single",
     "test": "jest --watchAll",
-    "lint": "expo lint",
+    "lint": "bunx @biomejs/biome lint --write .",
+    "format": "bunx @biomejs/biome format --write .",
+    "prebuild": "bun expo prebuild",
+    "build:web": "bunx expo export -p web",
+    "build:preview:android": "eas build -e preview -p android",
+    "build:preview:ios": "eas build -e preview -p ios",
+    "build:prod:android": "eas build -e production -p android",
+    "build:prod:ios": "eas build -e production -p ios",
+    "submit:prod:android": "eas submit -e production -p android",
+    "submit:prod:ios": "eas submit -e production -p ios",
+    "doctor": "bunx expo-doctor@latest",
+    "doctor:fix": "bunx expo install --check",
+    "clean:android": "rm -rf android",
+    "clean:ios": "rm -rf ios",
+    "clean:expo": "rm -rf .expo",
+    "clean:repo": "rm -rf node_modules",
+    "clean:all": "bun clean:android && bun clean:ios && bun clean:expo && bun clean:repo",
     "reset-project": "node ./scripts/reset-project.js"
   },
   "jest": {
@@ -30,8 +46,6 @@
     "expo-status-bar": "~1.12.1",
     "expo-system-ui": "~3.0.7",
     "expo-web-browser": "~13.0.3",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
@@ -49,17 +63,20 @@
     "@types/react-test-renderer": "^18.0.7",
     "jest": "^29.2.1",
     "jest-expo": "~51.0.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
   },
   "lint-staged": {
     "**/*.+(js|jsx|ts|tsx)": [
-      "bunx @biomejs/biome lint --apply",
+      "bunx @biomejs/biome lint --write",
       "bunx @biomejs/biome format --write"
     ],
     "**/*.+(json|md|mdx)": ["bunx @biomejs/biome format --write"]
   },
   "commitlint": {
     "extends": ["@commitlint/config-conventional"]
-  }
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }

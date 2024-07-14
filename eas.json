@@ -5,12 +5,21 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "APP_VARIANT": "development"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "APP_VARIANT": "preview"
+      }
     },
-    "production": {}
+    "production": {
+      "distribution": "store",
+      "autoIncrement": true
+    }
   },
   "submit": {
     "production": {}
