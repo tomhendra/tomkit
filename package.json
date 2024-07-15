@@ -12,6 +12,7 @@
     "lint": "bunx @biomejs/biome lint --write .",
     "format": "bunx @biomejs/biome format --write .",
     "prebuild": "bun expo prebuild",
+    "prebuild:clean": "bun prebuild --clean",
     "build:web": "bunx expo export -p web",
     "build:preview:android": "eas build -e preview -p android",
     "build:preview:ios": "eas build -e preview -p ios",
@@ -35,6 +36,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@expo/vector-icons": "^14.0.2",
+    "@radix-ui/colors": "^3.0.0",
     "@react-navigation/native": "^6.0.2",
     "expo": "~51.0.20",
     "expo-constants": "~16.0.2",
@@ -46,6 +48,7 @@
     "expo-status-bar": "~1.12.1",
     "expo-system-ui": "~3.0.7",
     "expo-web-browser": "~13.0.3",
+    "lucide-react-native": "^0.408.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
@@ -53,6 +56,8 @@
     "react-native-reanimated": "~3.10.1",
     "react-native-safe-area-context": "4.10.1",
     "react-native-screens": "3.31.1",
+    "react-native-svg": "15.2.0",
+    "react-native-unistyles": "^2.8.3",
     "react-native-web": "~0.19.10"
   },
   "devDependencies": {

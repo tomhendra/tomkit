@@ -1,8 +1,7 @@
-import { Tabs } from "expo-router";
-
-import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import { Colors } from "@/lib/constants/Colors";
 import { useColorScheme } from "@/lib/hooks/useColorScheme";
+import { Tabs } from "expo-router";
+import { Code, House } from "lucide-react-native";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -18,24 +17,14 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "home" : "home-outline"}
-              color={color}
-            />
-          ),
+          tabBarIcon: ({ color }) => <House color={color} size={28} />,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
           title: "Explore",
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "code-slash" : "code-slash-outline"}
-              color={color}
-            />
-          ),
+          tabBarIcon: ({ color }) => <Code color={color} size={28} />,
         }}
       />
     </Tabs>
