@@ -45,15 +45,11 @@ export default function HomeScreen() {
   );
 }
 
-const stylesheet = createStyleSheet((theme, runtime) => ({
+const stylesheet = createStyleSheet((theme) => ({
   titleContainer: {
     paddingVertical: theme.space.$2,
   },
   stepContainer: {
-    backgroundColor:
-      runtime.orientation === "landscape"
-        ? theme.colors.accent
-        : theme.colors.background,
     gap: theme.space.$4,
     marginBottom: theme.space.$2,
   },

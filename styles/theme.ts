@@ -42,7 +42,9 @@ export const base = {
     heading: {
       regular: "SpaceMono-Regular",
     },
-    monospace: "",
+    monospace: {
+      regular: "SpaceMono-Regular",
+    },
   },
   fontSizes: {
     $xxs: 8,
@@ -72,12 +74,12 @@ export const base = {
     black: 900,
   },
   letterSpacings: {
-    tighter: -0.05,
-    tight: -0.025,
+    tighter: -0.5,
+    tight: -0.25,
     normal: 0,
-    wide: 0.025,
-    wider: 0.05,
-    widest: 0.1,
+    wide: 0.25,
+    wider: 0.5,
+    widest: 1,
   },
   lineHeights: {
     $3: 12,
@@ -124,7 +126,48 @@ export const base = {
     $full: 9999,
   },
   shadows: {
-    // TODO RN shadows
+    $sm: {
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 1 },
+      shadowOpacity: 0.05,
+      shadowRadius: 1,
+      elevation: 1,
+    },
+    $shadow: {
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 1 },
+      shadowOpacity: 0.1,
+      shadowRadius: 2,
+      elevation: 2,
+    },
+    $md: {
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 3,
+      elevation: 3,
+    },
+    $lg: {
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.1,
+      shadowRadius: 5,
+      elevation: 4,
+    },
+    $xl: {
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 8 },
+      shadowOpacity: 0.1,
+      shadowRadius: 6,
+      elevation: 5,
+    },
+    $2xl: {
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 12 },
+      shadowOpacity: 0.15,
+      shadowRadius: 8,
+      elevation: 6,
+    },
   },
   sizes: {
     $0: 0,
