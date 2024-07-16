@@ -45,21 +45,23 @@ export default function HomeScreen() {
   );
 }
 
-const stylesheet = createStyleSheet((theme) => ({
+const stylesheet = createStyleSheet((theme, runtime) => ({
   titleContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
+    paddingVertical: theme.space.$2,
   },
   stepContainer: {
-    gap: theme.space[4],
-    marginBottom: 8,
+    backgroundColor:
+      runtime.orientation === "landscape"
+        ? theme.colors.accent
+        : theme.colors.background,
+    gap: theme.space.$4,
+    marginBottom: theme.space.$2,
   },
   reactLogo: {
+    position: "absolute",
     height: 178,
     width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
+    bottom: theme.space.$0,
+    left: theme.space.$0,
   },
 }));

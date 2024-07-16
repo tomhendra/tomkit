@@ -11,8 +11,6 @@ import {
   yellowDark,
 } from "@radix-ui/colors";
 
-import { UnistylesRegistry } from "react-native-unistyles";
-
 export const breakpoints = {
   xs: 0,
   sm: 576,
@@ -25,77 +23,214 @@ export const breakpoints = {
 
 export const base = {
   aspectRatio: {
-    auto: "auto", // TODO check for RN
+    auto: "auto",
     square: "1 / 1",
     video: "16 / 9",
   },
-  borders: {},
-  borderStyles: {},
-  borderWidths: {},
-  container: {},
+  container: {
+    $xs: 320,
+    $sm: 640,
+    $md: 768,
+    $lg: 1024,
+    $xl: 1280,
+    $2xl: 1536,
+  },
   fonts: {
-    body: {},
-    heading: {},
-    monospace: {},
+    body: {
+      regular: "SpaceMono-Regular",
+    },
+    heading: {
+      regular: "SpaceMono-Regular",
+    },
+    monospace: "",
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+  fontSizes: {
+    $xxs: 8,
+    $xs: 12,
+    $sm: 14,
+    $base: 16,
+    $lg: 18,
+    $xl: 20,
+    $2xl: 24,
+    $3xl: 30,
+    $4xl: 36,
+    $5xl: 48,
+    $6xl: 60,
+    $7xl: 72,
+    $8xl: 96,
+    $9xl: 128,
+  },
   fontWeights: {
-    body: 400,
-    heading: 500,
-    bold: 900,
+    thin: 100,
+    extralight: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900,
   },
-  letterSpacings: {},
+  letterSpacings: {
+    tighter: -0.05,
+    tight: -0.025,
+    normal: 0,
+    wide: 0.025,
+    wider: 0.05,
+    widest: 0.1,
+  },
   lineHeights: {
-    body: {},
-    heading: {},
+    $3: 12,
+    $4: 16,
+    $5: 20,
+    $6: 24,
+    $7: 28,
+    $8: 32,
+    $9: 36,
+    $10: 40,
   },
-  opacities: {},
-  radii: {},
-  shadows: {},
-  sizes: {},
+  opacities: {
+    $0: 0,
+    $5: 0.05,
+    $10: 0.1,
+    $15: 0.15,
+    $20: 0.2,
+    $25: 0.25,
+    $30: 0.3,
+    $35: 0.35,
+    $40: 0.4,
+    $45: 0.45,
+    $50: 0.5,
+    $55: 0.55,
+    $60: 0.6,
+    $65: 0.65,
+    $70: 0.7,
+    $75: 0.75,
+    $80: 0.8,
+    $85: 0.85,
+    $90: 0.9,
+    $95: 0.95,
+    $100: 100,
+  },
+  radii: {
+    $none: 0,
+    $sm: 2,
+    $base: 4,
+    $md: 6,
+    $lg: 8,
+    $xl: 12,
+    $2xl: 16,
+    $3xl: 24,
+    $full: 9999,
+  },
+  shadows: {
+    // TODO RN shadows
+  },
+  sizes: {
+    $0: 0,
+    $px: 1,
+    $2px: 2,
+    $1: 4,
+    $2: 8,
+    $3: 12,
+    $4: 16,
+    $5: 20,
+    $6: 24,
+    $7: 28,
+    $8: 32,
+    $9: 36,
+    $10: 40,
+    $11: 44,
+    $12: 48,
+    $14: 56,
+    $16: 64,
+    $20: 80,
+    $24: 96,
+    $28: 112,
+    $32: 128,
+    $36: 144,
+    $40: 160,
+    $44: 176,
+    $48: 192,
+    $52: 208,
+    $56: 224,
+    $60: 240,
+    $64: 256,
+    $72: 288,
+    $80: 320,
+    $96: 384,
+  },
   space: {
-    0: 0,
-    px: 1,
-    0.5: 0.5,
-    1: 4,
-    1.5: 6,
-    2: 8,
-    2.5: 10,
-    3: 12,
-    3.5: 14,
-    4: 16,
-    5: 20,
-    6: 24,
-    7: 28,
-    8: 32,
-    9: 36,
-    10: 40,
-    11: 44,
-    12: 48,
-    14: 56,
-    16: 64,
-    20: 80,
-    24: 96,
-    28: 112,
-    32: 128,
-    36: 144,
-    40: 160,
-    44: 176,
-    48: 192,
-    52: 208,
-    56: 224,
-    60: 240,
-    64: 256,
-    72: 288,
-    80: 320,
-    96: 384,
+    $0: 0,
+    $px: 1,
+    $2px: 2,
+    $1: 4,
+    $2: 8,
+    $3: 12,
+    $4: 16,
+    $5: 20,
+    $6: 24,
+    $7: 28,
+    $8: 32,
+    $9: 36,
+    $10: 40,
+    $11: 44,
+    $12: 48,
+    $14: 56,
+    $16: 64,
+    $20: 80,
+    $24: 96,
+    $28: 112,
+    $32: 128,
+    $36: 144,
+    $40: 160,
+    $44: 176,
+    $48: 192,
+    $52: 208,
+    $56: 224,
+    $60: 240,
+    $64: 256,
+    $72: 288,
+    $80: 320,
+    $96: 384,
   },
-  transitions: {},
-  zIndices: {},
+  transitions: {
+    // TODO transitions with Reanimated
+  },
+  zIndices: {
+    $0: 0,
+    $10: 10,
+    $20: 20,
+    $30: 30,
+    $40: 40,
+    $50: 50,
+    $auto: "auto",
+  },
+} as const;
+
+export const utils = {
+  debug: {
+    pink: {
+      borderStyle: "solid",
+      borderColor: "#ff69b4",
+      borderWidth: 1,
+    },
+    blue: {
+      borderStyle: "solid",
+      borderColor: "#00FFFF",
+      borderWidth: 1,
+    },
+    green: {
+      borderStyle: "solid",
+      borderColor: "#00FF00",
+      borderWidth: 1,
+    },
+  },
 } as const;
 
 export const lightTheme = {
   ...base,
+  ...utils,
   colors: {
     background: gray.gray1,
     foreground: gray.gray12,
@@ -128,6 +263,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   ...base,
+  ...utils,
   colors: {
     background: grayDark.gray1,
     foreground: grayDark.gray12,
@@ -157,28 +293,3 @@ export const darkTheme = {
     outline: blueDark.blue4,
   },
 } as const;
-
-// if you defined breakpoints
-type AppBreakpoints = typeof breakpoints;
-
-// if you defined themes
-type AppThemes = {
-  light: typeof lightTheme;
-  dark: typeof darkTheme;
-};
-
-// override library types
-declare module "react-native-unistyles" {
-  export interface UnistylesBreakpoints extends AppBreakpoints {}
-  export interface UnistylesThemes extends AppThemes {}
-}
-
-UnistylesRegistry.addBreakpoints(breakpoints)
-  .addThemes({
-    light: lightTheme,
-    dark: darkTheme,
-  })
-  .addConfig({
-    // you can pass here optional config described below
-    adaptiveThemes: true,
-  });
