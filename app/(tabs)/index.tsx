@@ -30,7 +30,7 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Unistyles</ThemedText>
         <ThemedText>
-          Unistlyes combines the simplicity of StyleSheet with the performance
+          Unistyles combines the simplicity of StyleSheet with the performance
           of C++.
         </ThemedText>
       </ThemedView>
