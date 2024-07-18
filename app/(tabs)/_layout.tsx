@@ -1,7 +1,7 @@
 import { Colors } from "@/lib/constants/Colors";
 import { useColorScheme } from "@/lib/hooks/useColorScheme";
 import { Tabs } from "expo-router";
-import { Code, House } from "lucide-react-native";
+import { Component, House, SquarePlay } from "lucide-react-native";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -21,10 +21,17 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="animations"
         options={{
-          title: "Explore",
-          tabBarIcon: ({ color }) => <Code color={color} size={28} />,
+          title: "Animations",
+          tabBarIcon: ({ color }) => <SquarePlay color={color} size={28} />,
+        }}
+      />
+      <Tabs.Screen
+        name="components"
+        options={{
+          title: "Components",
+          tabBarIcon: ({ color }) => <Component color={color} size={28} />,
         }}
       />
     </Tabs>
