@@ -1,7 +1,6 @@
-import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
-import { Image } from "react-native";
+import ParallaxScrollView from "@/components/layouts/parallax-scroll-view";
+import { Text } from "@/components/ui/text";
+import { Image, View } from "react-native";
 import { createStyleSheet, useStyles } from "react-native-unistyles";
 
 export default function HomeScreen() {
@@ -17,30 +16,30 @@ export default function HomeScreen() {
         />
       }
     >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Tomkit</ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Template</ThemedText>
-        <ThemedText>
+      <View style={styles.titleContainer}>
+        <Text type="title">Tomkit</Text>
+      </View>
+      <View style={styles.stepContainer}>
+        <Text type="subtitle">Template</Text>
+        <Text>
           An opinionated starter template for React Native using the Expo
           framework.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Unistyles</ThemedText>
-        <ThemedText>
+        </Text>
+      </View>
+      <View style={styles.stepContainer}>
+        <Text type="subtitle">Unistyles</Text>
+        <Text>
           Unistyles combines the simplicity of StyleSheet with the performance
           of C++.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">React Native Primitives</ThemedText>
-        <ThemedText>
+        </Text>
+      </View>
+      <View style={styles.stepContainer}>
+        <Text type="subtitle">React Native Primitives</Text>
+        <Text>
           Built upon unstyled universal components with a focus on
           accessibility.
-        </ThemedText>
-      </ThemedView>
+        </Text>
+      </View>
     </ParallaxScrollView>
   );
 }

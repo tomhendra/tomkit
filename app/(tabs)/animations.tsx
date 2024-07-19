@@ -11,12 +11,12 @@ export default function AnimationsScreen() {
   );
 }
 
-const stylesheet = createStyleSheet((_, rt) => ({
+const stylesheet = createStyleSheet((_, runtime) => ({
   container: {
     flex: 1,
-    paddingTop: rt.insets.top,
-    paddingRight: rt.insets.right,
-    paddingBottom: rt.insets.bottom,
-    paddingLeft: rt.insets.left,
+    paddingTop: runtime.insets.top,
+    paddingRight: runtime.insets.right,
+    paddingBottom: runtime.insets.bottom,
+    paddingLeft: runtime.insets.left,
   },
 }));
