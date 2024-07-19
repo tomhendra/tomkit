@@ -1,13 +1,13 @@
-import { Text as RNText, type TextProps as RNTextProps } from "react-native";
+import { Text as RNText, type TextProps as RNTextProps } from "react-native"
 
-import { useThemeColor } from "@/lib/hooks/useThemeColor";
-import { createStyleSheet, useStyles } from "react-native-unistyles";
+import { useThemeColor } from "@/lib/hooks/useThemeColor"
+import { createStyleSheet, useStyles } from "react-native-unistyles"
 
 export type TextProps = RNTextProps & {
-  lightColor?: string;
-  darkColor?: string;
-  type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link";
-};
+  lightColor?: string
+  darkColor?: string
+  type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link"
+}
 
 export function Text({
   style,
@@ -16,8 +16,8 @@ export function Text({
   type = "default",
   ...rest
 }: TextProps) {
-  const color = useThemeColor({ light: lightColor, dark: darkColor }, "text");
-  const { styles } = useStyles(stylesheet);
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, "text")
+  const { styles } = useStyles(stylesheet)
 
   return (
     <RNText
@@ -32,31 +32,31 @@ export function Text({
       ]}
       {...rest}
     />
-  );
+  )
 }
 
-const stylesheet = createStyleSheet((theme) => ({
+const stylesheet = createStyleSheet((t) => ({
   default: {
-    fontSize: theme.fontSizes.$base,
-    lineHeight: theme.lineHeights.$6,
+    fontSize: t.fontSizes.$base,
+    lineHeight: t.lineHeights.$6,
   },
   defaultSemiBold: {
-    fontSize: theme.fontSizes.$base,
-    lineHeight: theme.lineHeights.$6,
-    fontWeight: theme.fontWeights.$semibold,
+    fontSize: t.fontSizes.$base,
+    lineHeight: t.lineHeights.$6,
+    fontWeight: t.fontWeights.$semibold,
   },
   title: {
-    fontSize: theme.fontSizes.$3xl,
-    fontWeight: theme.fontWeights.$bold,
-    lineHeight: theme.lineHeights.$8,
+    fontSize: t.fontSizes.$3xl,
+    fontWeight: t.fontWeights.$bold,
+    lineHeight: t.lineHeights.$8,
   },
   subtitle: {
-    fontSize: theme.fontSizes.$2xl,
-    fontWeight: theme.fontWeights.$bold,
+    fontSize: t.fontSizes.$2xl,
+    fontWeight: t.fontWeights.$bold,
   },
   link: {
-    lineHeight: theme.lineHeights.$8,
-    fontSize: theme.fontSizes.$base,
-    color: theme.colors.$accent,
+    lineHeight: t.lineHeights.$8,
+    fontSize: t.fontSizes.$base,
+    color: t.colors.$accentForeground,
   },
-}));
+}))

@@ -9,7 +9,7 @@ import {
   redDark,
   yellow,
   yellowDark,
-} from "@radix-ui/colors";
+} from "@radix-ui/colors"
 
 export const breakpoints = {
   $xs: 0,
@@ -19,7 +19,7 @@ export const breakpoints = {
   $xl: 1200,
   $superLarge: 2000,
   $tvLike: 4000,
-} as const;
+} as const
 
 export const base = {
   aspectRatio: {
@@ -249,7 +249,7 @@ export const base = {
     $50: 50,
     $auto: "auto",
   },
-} as const;
+} as const
 
 export const utils = {
   debug: {
@@ -269,7 +269,7 @@ export const utils = {
       borderWidth: 1,
     },
   },
-} as const;
+} as const
 
 export const lightTheme = {
   ...base,
@@ -302,7 +302,7 @@ export const lightTheme = {
     $ring: gray.gray12,
     $outline: blue.blue4,
   },
-} as const;
+} as const
 
 export const darkTheme = {
   ...base,
@@ -335,4 +335,4 @@ export const darkTheme = {
     $ring: grayDark.gray12,
     $outline: blueDark.blue4,
   },
-} as const;
+} as const

@@ -1,10 +1,10 @@
-import { Colors } from "@/lib/constants/Colors";
-import { useColorScheme } from "@/lib/hooks/useColorScheme";
-import { Tabs } from "expo-router";
-import { Component, House, SquarePlay } from "lucide-react-native";
+import { Colors } from "@/lib/constants/Colors"
+import { useColorScheme } from "@/lib/hooks/useColorScheme"
+import { Tabs } from "expo-router"
+import { Component, House, SquarePlay } from "lucide-react-native"
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const colorScheme = useColorScheme()
 
   return (
     <Tabs
@@ -35,5 +35,5 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
-  );
+  )
 }

@@ -1,30 +1,30 @@
-import type { ConfigContext, ExpoConfig } from "expo/config";
+import type { ConfigContext, ExpoConfig } from "expo/config"
 
-const IS_DEV = process.env.APP_VARIANT === "development";
-const IS_PREVIEW = process.env.APP_VARIANT === "preview";
+const IS_DEV = process.env.APP_VARIANT === "development"
+const IS_PREVIEW = process.env.APP_VARIANT === "preview"
 
 function getUniqueIdentifier() {
   if (IS_DEV) {
-    return "com.tomhendra.tomkit.dev";
+    return "com.tomhendra.tomkit.dev"
   }
 
   if (IS_PREVIEW) {
-    return "com.tomhendra.tomkit.preview";
+    return "com.tomhendra.tomkit.preview"
   }
 
-  return "com.tomhendra.tomkit";
+  return "com.tomhendra.tomkit"
 }
 
 function getAppName() {
   if (IS_DEV) {
-    return "Tomkit (Dev)";
+    return "Tomkit (Dev)"
   }
 
   if (IS_PREVIEW) {
-    return "Tomkit (Preview)";
+    return "Tomkit (Preview)"
   }
 
-  return "Tomkit";
+  return "Tomkit"
 }
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
@@ -75,4 +75,4 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   experiments: {
     typedRoutes: true,
   },
-});
+})

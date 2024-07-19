@@ -1,4 +1,4 @@
-import { darkTheme, lightTheme } from "./theme";
+import { darkTheme, lightTheme } from "./theme"
 // native UI colours
 export const NAV_THEME = {
   light: {
@@ -17,4 +17,4 @@ export const NAV_THEME = {
     primary: darkTheme.colors.primary,
     text: darkTheme.colors.foreground,
   },
-};
+}

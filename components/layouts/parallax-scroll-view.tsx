@@ -1,27 +1,29 @@
-import type { PropsWithChildren, ReactElement } from "react";
-import { StyleSheet, View, useColorScheme } from "react-native";
+import type { PropsWithChildren, ReactElement } from "react"
+import { View, useColorScheme } from "react-native"
 import Animated, {
   interpolate,
   useAnimatedRef,
   useAnimatedStyle,
   useScrollViewOffset,
-} from "react-native-reanimated";
+} from "react-native-reanimated"
+import { createStyleSheet, useStyles } from "react-native-unistyles"
 
-const HEADER_HEIGHT = 250;
+const HEADER_HEIGHT = 250
 
 type Props = PropsWithChildren<{
-  headerImage: ReactElement;
-  headerBackgroundColor: { dark: string; light: string };
-}>;
+  headerImage: ReactElement
+  headerBackgroundColor: { dark: string; light: string }
+}>
 
 export default function ParallaxScrollView({
   children,
   headerImage,
   headerBackgroundColor,
 }: Props) {
-  const colorScheme = useColorScheme() ?? "light";
-  const scrollRef = useAnimatedRef<Animated.ScrollView>();
-  const scrollOffset = useScrollViewOffset(scrollRef);
+  const colorScheme = useColorScheme() ?? "light"
+  const scrollRef = useAnimatedRef<Animated.ScrollView>()
+  const scrollOffset = useScrollViewOffset(scrollRef)
+  const { styles } = useStyles(stylesheet)
 
   const headerAnimatedStyle = useAnimatedStyle(() => {
     return {
@@ -41,8 +43,8 @@ export default function ParallaxScrollView({
           ),
         },
       ],
-    };
-  });
+    }
+  })
 
   return (
     <View style={styles.container}>
@@ -59,21 +61,21 @@ export default function ParallaxScrollView({
         <View style={styles.content}>{children}</View>
       </Animated.ScrollView>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
+const stylesheet = createStyleSheet((t) => ({
   container: {
     flex: 1,
   },
   header: {
-    height: 250,
+    height: t.sizes.$64,
     overflow: "hidden",
   },
   content: {
     flex: 1,
-    padding: 32,
-    gap: 16,
+    padding: t.space.$8,
+    gap: t.space.$4,
     overflow: "hidden",
   },
-});
+}))

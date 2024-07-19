@@ -1,10 +1,11 @@
-import ParallaxScrollView from "@/components/layouts/parallax-scroll-view";
-import { Text } from "@/components/ui/text";
-import { Image, View } from "react-native";
-import { createStyleSheet, useStyles } from "react-native-unistyles";
+import ParallaxScrollView from "@/components/layouts/parallax-scroll-view"
+import { Text } from "@/components/ui/text"
+import { Link } from "expo-router"
+import { Image, View } from "react-native"
+import { createStyleSheet, useStyles } from "react-native-unistyles"
 
 export default function HomeScreen() {
-  const { styles } = useStyles(stylesheet);
+  const { styles } = useStyles(stylesheet)
 
   return (
     <ParallaxScrollView
@@ -40,23 +41,26 @@ export default function HomeScreen() {
           accessibility.
         </Text>
       </View>
+      <Link href="foo">
+        <Text>Force 404</Text>
+      </Link>
     </ParallaxScrollView>
-  );
+  )
 }
 
-const stylesheet = createStyleSheet((theme) => ({
+const stylesheet = createStyleSheet((t) => ({
   titleContainer: {
-    paddingVertical: theme.space.$2,
+    paddingVertical: t.space.$2,
   },
   stepContainer: {
-    gap: theme.space.$4,
-    marginBottom: theme.space.$2,
+    gap: t.space.$4,
+    marginBottom: t.space.$2,
   },
   reactLogo: {
     position: "absolute",
     height: 178,
     width: 290,
-    bottom: theme.space.$0,
-    left: theme.space.$0,
+    bottom: t.space.$0,
+    left: t.space.$0,
   },
-}));
+}))

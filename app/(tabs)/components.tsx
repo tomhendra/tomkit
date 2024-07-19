@@ -1,14 +1,14 @@
-import { Text, View } from "react-native";
-import { createStyleSheet, useStyles } from "react-native-unistyles";
+import { Text, View } from "react-native"
+import { createStyleSheet, useStyles } from "react-native-unistyles"
 
 export default function ComponentsScreen() {
-  const { styles } = useStyles(stylesheet);
+  const { styles } = useStyles(stylesheet)
 
   return (
     <View style={styles.container}>
       <Text>Components</Text>
     </View>
-  );
+  )
 }
 
 const stylesheet = createStyleSheet((_, rt) => ({
@@ -19,4 +19,4 @@ const stylesheet = createStyleSheet((_, rt) => ({
     paddingBottom: rt.insets.bottom,
     paddingLeft: rt.insets.left,
   },
-}));
+}))

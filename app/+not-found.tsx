@@ -1,9 +1,12 @@
-import { Link, Stack } from "expo-router";
-import { StyleSheet, View } from "react-native";
+import { Link, Stack } from "expo-router"
+import { View } from "react-native"
 
-import { Text } from "@/components/ui/text";
+import { Text } from "@/components/ui/text"
+import { createStyleSheet, useStyles } from "react-native-unistyles"
 
 export default function NotFoundScreen() {
+  const { styles } = useStyles(stylesheet)
+
   return (
     <>
       <Stack.Screen options={{ title: "Oops!" }} />
@@ -14,18 +17,20 @@ export default function NotFoundScreen() {
         </Link>
       </View>
     </>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
+const stylesheet = createStyleSheet((t) => ({
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    padding: 20,
+    padding: t.space.$5,
+    backgroundColor: t.colors.$background,
   },
   link: {
-    marginTop: 15,
-    paddingVertical: 15,
+    marginTop: t.space.$4,
+    paddingVertical: t.space.$4,
+    color: t.colors.$foreground,
   },
-});
+}))
