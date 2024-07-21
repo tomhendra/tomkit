@@ -11,13 +11,13 @@ import {
   yellowDark,
 } from "@radix-ui/colors"
 
-const aspectRatio = {
+const aspectRatios = {
   aspectAuto: "auto",
   aspectSquare: "1 / 1",
   aspectVideo: "16 / 9",
 } as const
 
-const container = {
+const containers = {
   containerXs: 320,
   containerSm: 640,
   containerMd: 768,
@@ -252,8 +252,8 @@ const zIndices = {
 } as const
 
 const base = {
-  ...aspectRatio,
-  ...container,
+  ...aspectRatios,
+  ...containers,
   ...fonts,
   ...fontSizes,
   ...fontWeights,
