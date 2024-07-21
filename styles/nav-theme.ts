@@ -2,19 +2,19 @@ import { darkTheme, lightTheme } from "./theme"
 // native UI colours
 export const NAV_THEME = {
   light: {
-    background: lightTheme.colors.background,
-    border: lightTheme.colors.border,
-    card: lightTheme.colors.card,
-    notification: lightTheme.colors.destructive,
-    primary: lightTheme.colors.primary,
-    text: lightTheme.colors.foreground,
+    background: lightTheme.colorBackground,
+    border: lightTheme.colorBorder,
+    card: lightTheme.colorCard,
+    notification: lightTheme.colorDestructive,
+    primary: lightTheme.colorPrimary,
+    text: lightTheme.colorForeground,
   },
   dark: {
-    background: darkTheme.colors.background,
-    border: darkTheme.colors.border,
-    card: darkTheme.colors.card,
-    notification: darkTheme.colors.destructive,
-    primary: darkTheme.colors.primary,
-    text: darkTheme.colors.foreground,
+    background: darkTheme.colorBackground,
+    border: darkTheme.colorBorder,
+    card: darkTheme.colorCard,
+    notification: darkTheme.colorDestructive,
+    primary: darkTheme.colorPrimary,
+    text: darkTheme.colorForeground,
   },
 }

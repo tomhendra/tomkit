@@ -50,17 +50,17 @@ export default function HomeScreen() {
 
 const stylesheet = createStyleSheet((t) => ({
   titleContainer: {
-    paddingVertical: t.space.$2,
+    paddingVertical: t.space2,
   },
   stepContainer: {
-    gap: t.space.$4,
-    marginBottom: t.space.$2,
+    gap: t.space4,
+    marginBottom: t.space2,
   },
   reactLogo: {
     position: "absolute",
     height: 178,
     width: 290,
-    bottom: t.space.$0,
-    left: t.space.$0,
+    bottom: t.space0,
+    left: t.space0,
   },
 }))

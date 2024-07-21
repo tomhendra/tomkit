@@ -34,8 +34,8 @@ export function HelloWave() {
 
 const stylesheet = createStyleSheet((t) => ({
   text: {
-    fontSize: t.space.$7,
-    lineHeight: t.space.$8,
+    fontSize: t.space7,
+    lineHeight: t.space8,
     marginTop: -6,
   },
 }))

@@ -64,18 +64,22 @@ export default function ParallaxScrollView({
   )
 }
 
-const stylesheet = createStyleSheet((t) => ({
+const stylesheet = createStyleSheet((t, rt) => ({
   container: {
     flex: 1,
+    paddingTop: rt.insets.top,
+    paddingRight: rt.insets.right,
+    // paddingBottom: rt.insets.bottom,
+    paddingLeft: rt.insets.left,
   },
   header: {
-    height: t.sizes.$64,
+    height: t.size64,
     overflow: "hidden",
   },
   content: {
     flex: 1,
-    padding: t.space.$8,
-    gap: t.space.$4,
+    gap: t.space4,
+    padding: t.space8,
     overflow: "hidden",
   },
 }))

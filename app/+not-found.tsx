@@ -25,12 +25,12 @@ const stylesheet = createStyleSheet((t) => ({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    padding: t.space.$5,
-    backgroundColor: t.colors.$background,
+    padding: t.space5,
+    backgroundColor: t.colorBackground,
   },
   link: {
-    marginTop: t.space.$4,
-    paddingVertical: t.space.$4,
-    color: t.colors.$foreground,
+    marginTop: t.space4,
+    paddingVertical: t.space4,
+    color: t.colorForeground,
   },
 }))

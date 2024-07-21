@@ -37,26 +37,26 @@ export function Text({
 
 const stylesheet = createStyleSheet((t) => ({
   default: {
-    fontSize: t.fontSizes.$base,
-    lineHeight: t.lineHeights.$6,
+    fontSize: t.fontSizeBase,
+    lineHeight: t.lineHeight6,
   },
   defaultSemiBold: {
-    fontSize: t.fontSizes.$base,
-    lineHeight: t.lineHeights.$6,
-    fontWeight: t.fontWeights.$semibold,
+    fontSize: t.fontSizeBase,
+    lineHeight: t.lineHeight6,
+    fontWeight: t.fontWeightSemibold,
   },
   title: {
-    fontSize: t.fontSizes.$3xl,
-    fontWeight: t.fontWeights.$bold,
-    lineHeight: t.lineHeights.$8,
+    fontSize: t.fontSize3xl,
+    fontWeight: t.fontWeightBold,
+    lineHeight: t.lineHeight8,
   },
   subtitle: {
-    fontSize: t.fontSizes.$2xl,
-    fontWeight: t.fontWeights.$bold,
+    fontSize: t.fontSize2xl,
+    fontWeight: t.fontWeightBold,
   },
   link: {
-    lineHeight: t.lineHeights.$8,
-    fontSize: t.fontSizes.$base,
-    color: t.colors.$accentForeground,
+    lineHeight: t.lineHeight8,
+    fontSize: t.fontSizeBase,
+    color: t.colorAccentForeground,
   },
 }))
