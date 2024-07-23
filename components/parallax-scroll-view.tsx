@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from "react"
-import { View, useColorScheme } from "react-native"
+import { View } from "react-native"
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -15,12 +15,7 @@ type Props = PropsWithChildren<{
   headerBackgroundColor: { dark: string; light: string }
 }>
 
-export default function ParallaxScrollView({
-  children,
-  headerImage,
-  headerBackgroundColor,
-}: Props) {
-  const colorScheme = useColorScheme() ?? "light"
+export default function ParallaxScrollView({ children, headerImage }: Props) {
   const scrollRef = useAnimatedRef<Animated.ScrollView>()
   const scrollOffset = useScrollViewOffset(scrollRef)
   const { styles } = useStyles(stylesheet)
@@ -49,13 +44,7 @@ export default function ParallaxScrollView({
   return (
     <View style={styles.container}>
       <Animated.ScrollView ref={scrollRef} scrollEventThrottle={16}>
-        <Animated.View
-          style={[
-            styles.header,
-            { backgroundColor: headerBackgroundColor[colorScheme] },
-            headerAnimatedStyle,
-          ]}
-        >
+        <Animated.View style={[styles.header, headerAnimatedStyle]}>
           {headerImage}
         </Animated.View>
         <View style={styles.content}>{children}</View>
@@ -75,6 +64,7 @@ const stylesheet = createStyleSheet((t, rt) => ({
   header: {
     height: t.size64,
     overflow: "hidden",
+    backgroundColor: t.colorAccent,
   },
   content: {
     flex: 1,

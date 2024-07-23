@@ -1,15 +1,14 @@
-import { Colors } from "@/lib/constants/Colors"
-import { useColorScheme } from "@/lib/hooks/useColorScheme"
 import { Tabs } from "expo-router"
 import { Component, House, SquarePlay } from "lucide-react-native"
+import { useStyles } from "react-native-unistyles"
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme()
+  const { theme } = useStyles()
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: theme.colorPrimary,
         headerShown: false,
       }}
     >

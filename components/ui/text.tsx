@@ -1,6 +1,5 @@
 import { Text as RNText, type TextProps as RNTextProps } from "react-native"
 
-import { useThemeColor } from "@/lib/hooks/useThemeColor"
 import { createStyleSheet, useStyles } from "react-native-unistyles"
 
 export type TextProps = RNTextProps & {
@@ -16,13 +15,11 @@ export function Text({
   type = "default",
   ...rest
 }: TextProps) {
-  const color = useThemeColor({ light: lightColor, dark: darkColor }, "text")
   const { styles } = useStyles(stylesheet)
 
   return (
     <RNText
       style={[
-        { color },
         type === "default" ? styles.default : undefined,
         type === "title" ? styles.title : undefined,
         type === "defaultSemiBold" ? styles.defaultSemiBold : undefined,
