@@ -10,7 +10,7 @@ function HomeScreen() {
     <ParallaxScrollView
       headerImage={
         <Image
-          source={require("@/assets/images/partial-react-logo.png")}
+          source={require("@/assets/images/partial-tom-logo.png")}
           style={styles.reactLogo}
         />
       }
