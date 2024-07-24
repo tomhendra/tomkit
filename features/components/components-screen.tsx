@@ -11,7 +11,7 @@ export default function ComponentsScreen() {
   )
 }
 
-const stylesheet = createStyleSheet((_, rt) => ({
+const stylesheet = createStyleSheet((_t, rt) => ({
   container: {
     flex: 1,
     paddingTop: rt.insets.top,
