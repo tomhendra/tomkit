@@ -36,20 +36,24 @@ const stylesheet = createStyleSheet((t) => ({
   default: {
     fontSize: t.fontSizeBase,
     lineHeight: t.lineHeight6,
+    color: t.colorForeground,
   },
   defaultSemiBold: {
     fontSize: t.fontSizeBase,
     lineHeight: t.lineHeight6,
     fontWeight: t.fontWeightSemibold,
+    color: t.colorForeground,
   },
   title: {
     fontSize: t.fontSize3xl,
     fontWeight: t.fontWeightBold,
     lineHeight: t.lineHeight8,
+    color: t.colorForeground,
   },
   subtitle: {
     fontSize: t.fontSize2xl,
     fontWeight: t.fontWeightBold,
+    color: t.colorForeground,
   },
   link: {
     lineHeight: t.lineHeight8,
