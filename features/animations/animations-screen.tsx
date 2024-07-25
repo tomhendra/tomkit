@@ -1,8 +1,8 @@
 import {} from "react-native-reanimated"
-import { PanGestures } from "./pan-gestures"
+import { BouncingSquare } from "./bouncing-square"
 
 function AnimationsScreen() {
-  return <PanGestures />
+  return <BouncingSquare />
 }
 
 export { AnimationsScreen }

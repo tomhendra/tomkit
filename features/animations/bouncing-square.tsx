@@ -1,4 +1,5 @@
 import { Text } from "@/components/ui/text"
+import { Dices } from "lucide-react-native"
 import { Pressable, View } from "react-native"
 import Animated, {
   useAnimatedStyle,
@@ -11,7 +12,7 @@ import { createStyleSheet, useStyles } from "react-native-unistyles"
 const SQUARE_SIZE = 120
 
 function BouncingSquare() {
-  const { styles } = useStyles(stylesheet)
+  const { styles, theme } = useStyles(stylesheet)
 
   const scale = useSharedValue(1)
   const rotate = useSharedValue(0)
@@ -47,15 +48,15 @@ function BouncingSquare() {
         <Pressable
           style={styles.button}
           onPress={() => {
-            // updated translate between [-100, 100]
             const MAX_TRANSLATION = 100
+            // calculate translate between [-100, 100]
             const tx = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
             const ty = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
             translateX.value = withSpring(tx)
             translateY.value = withSpring(ty)
           }}
         >
-          <Text style={styles.buttonText}>?</Text>
+          <Dices size={32} color={theme.colorInverseForeground} />
         </Pressable>
       </View>
     </View>
