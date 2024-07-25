@@ -1,5 +1,5 @@
 import { Text } from "@/components/ui/text"
-import { Pressable } from "react-native"
+import { Pressable, View } from "react-native"
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -31,35 +31,51 @@ function BouncingSquare() {
   }, [])
 
   return (
-    <>
-      <Animated.View
-        onTouchStart={() => {
-          scale.value = withTiming(1.2)
-        }}
-        onTouchEnd={() => {
-          scale.value = withTiming(1)
-          rotate.value = withTiming(rotate.value + 90)
-        }}
-        style={[styles.square, rStyle]}
-      />
-      <Pressable
-        style={styles.button}
-        onPress={() => {
-          // updated translate between [-100, 100]
-          const MAX_TRANSLATION = 100
-          const tx = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
-          const ty = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
-          translateX.value = withSpring(tx)
-          translateY.value = withSpring(ty)
-        }}
-      >
-        <Text style={styles.buttonText}>?</Text>
-      </Pressable>
-    </>
+    <View style={styles.container}>
+      <Text type="title">Bouncing Square</Text>
+      <View style={styles.body}>
+        <Animated.View
+          onTouchStart={() => {
+            scale.value = withTiming(1.2)
+          }}
+          onTouchEnd={() => {
+            scale.value = withTiming(1)
+            rotate.value = withTiming(rotate.value + 90)
+          }}
+          style={[styles.square, rStyle]}
+        />
+        <Pressable
+          style={styles.button}
+          onPress={() => {
+            // updated translate between [-100, 100]
+            const MAX_TRANSLATION = 100
+            const tx = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
+            const ty = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
+            translateX.value = withSpring(tx)
+            translateY.value = withSpring(ty)
+          }}
+        >
+          <Text style={styles.buttonText}>?</Text>
+        </Pressable>
+      </View>
+    </View>
   )
 }
 
-const stylesheet = createStyleSheet((t) => ({
+const stylesheet = createStyleSheet((t, rt) => ({
+  container: {
+    flex: 1,
+    paddingTop: rt.insets.top + t.space8,
+    paddingRight: rt.insets.right + t.space8,
+    paddingBottom: rt.insets.bottom,
+    paddingLeft: rt.insets.left + t.space8,
+    backgroundColor: t.colorBackground,
+  },
+  body: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   square: {
     height: SQUARE_SIZE,
     width: SQUARE_SIZE,
