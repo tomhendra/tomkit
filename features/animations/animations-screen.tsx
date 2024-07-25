@@ -1,64 +1,19 @@
 import { Text } from "@/components/ui/text"
-import { Pressable, View } from "react-native"
-import Animated, {
-  useAnimatedStyle,
-  useSharedValue,
-  withSpring,
-  withTiming,
-} from "react-native-reanimated"
+import { View } from "react-native"
+import {} from "react-native-reanimated"
 import { createStyleSheet, useStyles } from "react-native-unistyles"
+import { BouncingSquare } from "./bouncing-square"
 
 const SQUARE_SIZE = 120
 
-export default function AnimationsScreen() {
+function AnimationsScreen() {
   const { styles } = useStyles(stylesheet)
-
-  const scale = useSharedValue(1)
-  const rotate = useSharedValue(0)
-  // position shared values
-  const translateX = useSharedValue(0)
-  const translateY = useSharedValue(0)
-  const rStyle = useAnimatedStyle(() => {
-    return {
-      transform: [
-        // ALWAYS translate before rotate
-        { translateX: translateX.value },
-        { translateY: translateY.value },
-        { scale: scale.value },
-        { rotate: `${rotate.value}deg` },
-      ],
-    }
-  }, [])
 
   return (
     <View style={styles.container}>
-      <Text type="title" style={styles.title}>
-        Animation playground
-      </Text>
+      <Text type="title">Animations</Text>
       <View style={styles.body}>
-        <Animated.View
-          onTouchStart={() => {
-            scale.value = withTiming(1.2)
-          }}
-          onTouchEnd={() => {
-            scale.value = withTiming(1)
-            rotate.value = withTiming(rotate.value + 90)
-          }}
-          style={[styles.square, rStyle]}
-        />
-        <Pressable
-          style={styles.button}
-          onPress={() => {
-            // updated translate between [-100, 100]
-            const MAX_TRANSLATION = 100
-            const tx = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
-            const ty = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
-            translateX.value = withSpring(tx)
-            translateY.value = withSpring(ty)
-          }}
-        >
-          <Text style={styles.buttonText}>?</Text>
-        </Pressable>
+        <BouncingSquare />
       </View>
     </View>
   )
@@ -73,7 +28,6 @@ const stylesheet = createStyleSheet((t, rt) => ({
     paddingLeft: rt.insets.left + t.space8,
     backgroundColor: t.colorBackground,
   },
-  title: {},
   body: {
     flex: 1,
     justifyContent: "center",
@@ -100,5 +54,8 @@ const stylesheet = createStyleSheet((t, rt) => ({
   buttonText: {
     color: t.colorInverseForeground,
     fontSize: t.fontSize2xl,
+    fontWeight: t.fontWeightBold,
   },
 }))
+
+export { AnimationsScreen }
