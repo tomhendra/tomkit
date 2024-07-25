@@ -11,7 +11,7 @@ function HomeScreen() {
       headerImage={
         <Image
           source={require("@/assets/images/partial-tom-logo.png")}
-          style={styles.reactLogo}
+          style={styles.logo}
         />
       }
     >
@@ -51,12 +51,11 @@ const stylesheet = createStyleSheet((t) => ({
     gap: t.space4,
     marginBottom: t.space2,
   },
-  reactLogo: {
+  logo: {
     position: "absolute",
     height: 178,
     width: 290,
     bottom: t.space0,
-    left: t.space0,
   },
 }))
 
