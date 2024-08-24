@@ -1,5 +1,6 @@
-import { AnimationsScreen } from "@/features/animations/animations-screen"
+import { BouncingSquare } from "@/features/animations/bouncing-square"
 
 export default function Animations() {
-  return <AnimationsScreen />
+  // return <AnimationsScreen />
+  return <BouncingSquare />
 }
