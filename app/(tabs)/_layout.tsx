@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router"
-import { Component, House, SquarePlay } from "lucide-react-native"
+import { Component, House, ReceiptEuro } from "lucide-react-native"
 import { useStyles } from "react-native-unistyles"
 
 export default function TabLayout() {
@@ -20,10 +20,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="animations"
+        name="expenses"
         options={{
-          title: "Animations",
-          tabBarIcon: ({ color }) => <SquarePlay color={color} size={28} />,
+          title: "Expenses",
+          tabBarIcon: ({ color }) => <ReceiptEuro color={color} size={28} />,
         }}
       />
       <Tabs.Screen

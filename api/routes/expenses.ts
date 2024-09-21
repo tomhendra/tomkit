@@ -1,20 +1,9 @@
-import { Hono } from "hono"
+import { type Expense, expenseSchema } from "@/types/api-types"
 import { zValidator } from "@hono/zod-validator"
-import { z } from "zod"
+import { Hono } from "hono"
 
-// Define the schema for the expense object
-const expenseSchema = z.object({
-  id: z.number().int().positive().min(1),
-  name: z.string().min(1).max(50),
-  amount: z.number().int().positive(),
-  date: z.string(),
-})
-// Create a schema for the POST request
-const createPostSchema = expenseSchema.omit({ id: true })
-// Infer the type of the expense object
-type Expense = z.infer<typeof expenseSchema>
-// Create a fake list of expenses
 const fakeExpenses: Expense[] = []
+const createPostSchema = expenseSchema.omit({ id: true })
 
 // Create the expenses route
 export const expensesRoute = new Hono()
