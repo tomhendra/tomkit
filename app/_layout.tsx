@@ -1,4 +1,5 @@
 import { useColorScheme } from "@/lib/hooks/useColorScheme"
+import "@/styles"
 import { NAV_THEME } from "@/styles/nav-theme"
 import { type Theme, ThemeProvider } from "@react-navigation/native"
 import { useFonts } from "expo-font"
@@ -7,7 +8,6 @@ import * as SplashScreen from "expo-splash-screen"
 import { StatusBar } from "expo-status-bar"
 import { useEffect } from "react"
 import "react-native-reanimated"
-import "@/styles"
 
 const LIGHT_THEME: Theme = {
   dark: false,
