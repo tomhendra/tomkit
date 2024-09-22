@@ -17,11 +17,11 @@ function getUniqueIdentifier() {
 
 function getAppName() {
   if (IS_DEV) {
-    return "Tomkit (Dev)"
+    return "Tomkit Dev"
   }
 
   if (IS_PREVIEW) {
-    return "Tomkit (Preview)"
+    return "Tomkit Preview"
   }
 
   return "Tomkit"

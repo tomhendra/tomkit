@@ -1,9 +1,20 @@
 import type { Expense } from "@/types/api-types"
 import axios, { type AxiosInstance, type AxiosRequestConfig } from "axios"
+import { Platform } from "react-native"
 
-const API_BASE_URL = "http://localhost:3000/api"
+// Expo dev server: http://192.168.1.223:8081 (localhost)
+
+const getApiBaseUrl = () => {
+  if (__DEV__) {
+    return Platform.OS === "android"
+      ? "http://10.0.2.2:3000/api" // Android emulator
+      : "http://localhost:3000/api" // iOS simulator and web
+  }
+  return "https://api.prod.com" // Production URL
+}
+
 const axiosInstance: AxiosInstance = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: getApiBaseUrl(),
   headers: {
     "Content-Type": "application/json",
     language: "en-US",
@@ -44,9 +55,9 @@ const api = async ({ ...options }: AxiosRequestConfig) => {
  * expenses
  ******************************************************************************/
 export const getExpenses = async (): Promise<Expense[]> => {
-  const opts = {
+  const options: AxiosRequestConfig = {
     url: "expenses",
     method: "get",
   }
-  return api(opts)
+  return api(options)
 }
