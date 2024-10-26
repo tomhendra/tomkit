@@ -1,12 +1,9 @@
 import app from "./app"
 
-const hostname = "localhost"
-const port = "3000"
-
 Bun.serve({
   fetch: app.fetch,
-  hostname,
-  port,
+  // hostname: '0.0.0.0',
+  // port: 3000,
 })
 
-console.log(`Server is running on ${hostname}:${port}`)
+console.log(`Server is running...`)
