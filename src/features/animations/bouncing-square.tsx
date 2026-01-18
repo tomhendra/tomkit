@@ -76,7 +76,7 @@ const styles = StyleSheet.create((t) => ({
     backgroundColor: t.colorPrimary,
     borderRadius: t.rounded4xl,
     position: 'absolute',
-    bottom: 0,
-    right: 0,
+    bottom: 12,
+    right: 12,
   },
 }))

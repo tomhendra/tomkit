@@ -36,8 +36,12 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={styles.root}>
+      <StatusBar
+        barStyle={isDark ? 'light-content' : 'dark-content'}
+        backgroundColor="transparent"
+        translucent
+      />
       <NavigationContainer theme={isDark ? DARK_THEME : LIGHT_THEME}>
-        <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} />
         <RootNavigator />
       </NavigationContainer>
     </GestureHandlerRootView>

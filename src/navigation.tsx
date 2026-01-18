@@ -91,6 +91,8 @@ export function RootNavigator() {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: theme.colorPrimary,
+        tabBarInactiveTintColor: theme.colorSecondaryForeground,
+        tabBarStyle: { backgroundColor: theme.colorBackground },
         headerShown: false,
       }}
     >
