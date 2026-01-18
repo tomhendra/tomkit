@@ -3,10 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { useUnistyles } from 'react-native-unistyles'
 
-import { TextScreen } from './features/components/text-screen'
-
 import { BouncingSquare } from '@/features/animations/bouncing-square'
 import { PanGestures } from '@/features/animations/pan-gestures'
+import { TextScreen } from '@/features/components/text-screen'
 import { HomeScreen } from '@/features/home/home-screen'
 
 export type TabParamList = {
