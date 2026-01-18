@@ -1,0 +1,5 @@
+/* Camera Permission */
+"NSCameraUsageDescription" = "$(PRODUCT_NAME) necesita acceso a tu cámara para capturar fotos de tus recetas.";
+
+/* Photo Library Permission */
+"NSPhotoLibraryUsageDescription" = "$(PRODUCT_NAME) necesita acceso a tu biblioteca de fotos para seleccionar imágenes de tus recetas.";

@@ -1,0 +1,129 @@
+{
+  "buildFiles": [
+    "/Users/tomhendra/Developer/tomkit/node_modules/@shopify/react-native-skia/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-svg/android/src/main/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-unistyles/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-worklets-core/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/tomhendra/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/tomhendra/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "appmodules::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "appmodules",
+      "output": "/Users/tomhendra/Developer/tomkit/android/app/build/intermediates/cxx/Debug/2rb65qo4/obj/arm64-v8a/libappmodules.so",
+      "runtimeFiles": [
+        "/Users/tomhendra/Developer/tomkit/android/app/build/intermediates/cxx/Debug/2rb65qo4/obj/arm64-v8a/libreact_codegen_safeareacontext.so",
+        "/Users/tomhendra/Developer/tomkit/android/app/build/intermediates/cxx/Debug/2rb65qo4/obj/arm64-v8a/libreact_codegen_rnscreens.so",
+        "/Users/tomhendra/Developer/tomkit/android/app/build/intermediates/cxx/Debug/2rb65qo4/obj/arm64-v8a/libreact_codegen_rnsvg.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/6a05fb52cb10a5389af1fdd69ddba6e7/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
+      ]
+    },
+    "react_codegen_NitroModulesSpec::@472a82f9c57d3d3b8644": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_NitroModulesSpec"
+    },
+    "react_codegen_RNBootSplashSpec::@05d5bd8b08339ce1ebaa": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_RNBootSplashSpec"
+    },
+    "react_codegen_RNWorkletsSpec::@c787b30dd2b0f948dced": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_RNWorkletsSpec"
+    },
+    "react_codegen_TurboUnistyles::@4059c313f3e505963bcd": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_TurboUnistyles"
+    },
+    "react_codegen_rngesturehandler_codegen::@39f233abcd2c728bc6ec": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_rngesturehandler_codegen"
+    },
+    "react_codegen_rnreanimated::@8afabad14bfffa3f8b9a": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_rnreanimated"
+    },
+    "react_codegen_rnscreens::@25bcbd507e98d3a854ad": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_rnscreens",
+      "output": "/Users/tomhendra/Developer/tomkit/android/app/build/intermediates/cxx/Debug/2rb65qo4/obj/arm64-v8a/libreact_codegen_rnscreens.so",
+      "runtimeFiles": [
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/6a05fb52cb10a5389af1fdd69ddba6e7/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so"
+      ]
+    },
+    "react_codegen_rnskia::@376d8504f62839611b97": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_rnskia"
+    },
+    "react_codegen_rnsvg::@4f40eb209d0c0b4a3b65": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_rnsvg",
+      "output": "/Users/tomhendra/Developer/tomkit/android/app/build/intermediates/cxx/Debug/2rb65qo4/obj/arm64-v8a/libreact_codegen_rnsvg.so",
+      "runtimeFiles": [
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/6a05fb52cb10a5389af1fdd69ddba6e7/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so"
+      ]
+    },
+    "react_codegen_rnworklets::@68f58d84d4754f193387": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_rnworklets"
+    },
+    "react_codegen_safeareacontext::@7984cd80db47aa7b952a": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "react_codegen_safeareacontext",
+      "output": "/Users/tomhendra/Developer/tomkit/android/app/build/intermediates/cxx/Debug/2rb65qo4/obj/arm64-v8a/libreact_codegen_safeareacontext.so",
+      "runtimeFiles": [
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/6a05fb52cb10a5389af1fdd69ddba6e7/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/tomhendra/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/tomhendra/Library/Android/sdk/ndk/27.1.12297006/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

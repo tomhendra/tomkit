@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "prefabPath": "/Users/tomhendra/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/2.1.0/aa32fec809c44fa531f01dcfb739b5b3304d3050/cli-2.1.0-all.jar",
+  "packages": [
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-nitro-modules/android/build/intermediates/prefab_package/debug/prefab",
+    "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab",
+    "/Users/tomhendra/Developer/tomkit/node_modules/@shopify/react-native-skia/android/build/intermediates/prefab_package/debug/prefab",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-reanimated/android/build/intermediates/prefab_package/debug/prefab",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-worklets/android/build/intermediates/prefab_package/debug/prefab",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-worklets-core/android/build/intermediates/prefab_package/debug/prefab",
+    "/Users/tomhendra/.gradle/caches/8.14.3/transforms/688a1448d932f69cd055b3997d47f801/transformed/hermes-android-0.14.0-debug/prefab",
+    "/Users/tomhendra/.gradle/caches/8.14.3/transforms/6a05fb52cb10a5389af1fdd69ddba6e7/transformed/fbjni-0.7.0/prefab"
+  ]
+}
