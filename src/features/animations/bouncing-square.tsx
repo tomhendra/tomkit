@@ -1,6 +1,6 @@
 import { Container } from '@/components/layout/container'
 import Icon from '@react-native-vector-icons/lucide'
-import { Pressable } from 'react-native'
+import { Pressable, View } from 'react-native'
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -32,16 +32,18 @@ function BouncingSquare() {
 
   return (
     <Container>
-      <Animated.View
-        onTouchStart={() => {
-          scale.value = withTiming(1.2)
-        }}
-        onTouchEnd={() => {
-          scale.value = withTiming(1)
-          rotate.value = withTiming(rotate.value + 90)
-        }}
-        style={[styles.square, rStyle]}
-      />
+      <View style={styles.container}>
+        <Animated.View
+          onTouchStart={() => {
+            scale.value = withTiming(1.2)
+          }}
+          onTouchEnd={() => {
+            scale.value = withTiming(1)
+            rotate.value = withTiming(rotate.value + 90)
+          }}
+          style={[styles.square, rStyle]}
+        />
+      </View>
       <Pressable
         style={styles.button}
         onPress={() => {
@@ -61,6 +63,11 @@ function BouncingSquare() {
 export { BouncingSquare }
 
 const styles = StyleSheet.create((t) => ({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   square: {
     height: SQUARE_SIZE,
     width: SQUARE_SIZE,
