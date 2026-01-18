@@ -1,5 +1,6 @@
+import { Container } from '@/components/layout/container'
 import Icon from '@react-native-vector-icons/lucide'
-import { Pressable, View } from 'react-native'
+import { Pressable } from 'react-native'
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -30,51 +31,36 @@ function BouncingSquare() {
   }, [])
 
   return (
-    <View style={styles.wrapper}>
-      <View style={styles.container}>
-        <Animated.View
-          onTouchStart={() => {
-            scale.value = withTiming(1.2)
-          }}
-          onTouchEnd={() => {
-            scale.value = withTiming(1)
-            rotate.value = withTiming(rotate.value + 90)
-          }}
-          style={[styles.square, rStyle]}
-        />
-        <Pressable
-          style={styles.button}
-          onPress={() => {
-            const MAX_TRANSLATION = 100
-            const tx = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
-            const ty = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
-            translateX.value = withSpring(tx)
-            translateY.value = withSpring(ty)
-          }}
-        >
-          <Icon name="dices" size={32} color={theme.colorInverseForeground} />
-        </Pressable>
-      </View>
-    </View>
+    <Container>
+      <Animated.View
+        onTouchStart={() => {
+          scale.value = withTiming(1.2)
+        }}
+        onTouchEnd={() => {
+          scale.value = withTiming(1)
+          rotate.value = withTiming(rotate.value + 90)
+        }}
+        style={[styles.square, rStyle]}
+      />
+      <Pressable
+        style={styles.button}
+        onPress={() => {
+          const MAX_TRANSLATION = 100
+          const tx = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
+          const ty = Math.random() * MAX_TRANSLATION * 2 - MAX_TRANSLATION
+          translateX.value = withSpring(tx)
+          translateY.value = withSpring(ty)
+        }}
+      >
+        <Icon name="dices" size={32} color={theme.colorInverseForeground} />
+      </Pressable>
+    </Container>
   )
 }
 
 export { BouncingSquare }
 
-const styles = StyleSheet.create((t, rt) => ({
-  wrapper: {
-    flex: 1,
-    paddingTop: t.space8,
-    paddingRight: rt.insets.right + t.space8,
-    paddingBottom: rt.insets.bottom,
-    paddingLeft: rt.insets.left + t.space8,
-    backgroundColor: t.colorBackground,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+const styles = StyleSheet.create((t) => ({
   square: {
     height: SQUARE_SIZE,
     width: SQUARE_SIZE,

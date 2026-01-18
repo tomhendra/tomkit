@@ -1,40 +1,16 @@
+import { Container } from '@/components/layout/container'
 import { Text } from '@/components/ui/text'
-import { View } from 'react-native'
-import { StyleSheet } from 'react-native-unistyles'
 
-const SQUARE_SIZE = 120
+// import { StyleSheet } from 'react-native-unistyles'
 
 function PanGestures() {
   return (
-    <View style={styles.wrapper}>
-      <View style={styles.container}>
-        <Text>Pan gestures</Text>
-      </View>
-    </View>
+    <Container>
+      <Text>Pan gestures</Text>
+    </Container>
   )
 }
 
-const styles = StyleSheet.create((t, rt) => ({
-  wrapper: {
-    flex: 1,
-    paddingTop: rt.insets.top + t.space8,
-    paddingRight: rt.insets.right + t.space8,
-    paddingBottom: rt.insets.bottom,
-    paddingLeft: rt.insets.left + t.space8,
-    backgroundColor: t.colorBackground,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  square: {
-    height: SQUARE_SIZE,
-    width: SQUARE_SIZE,
-    backgroundColor: t.colorInfo,
-    borderCurve: 'continuous',
-    borderRadius: t.rounded4xl,
-  },
-}))
+// const styles = StyleSheet.create(() => ({}))
 
 export { PanGestures }
