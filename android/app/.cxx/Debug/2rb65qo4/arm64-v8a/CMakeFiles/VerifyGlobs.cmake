@@ -12,6 +12,54 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/CMakeFiles/cmake.verify_globs")
 endif()
 
+# react_codegen_SRCS at /Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/RNVectorIconsSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/ComponentDescriptors.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/EventEmitters.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/Props.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/ShadowNodes.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/VectorIconsLucide-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/react/renderer/components/VectorIconsLucide/*.cpp")
+set(OLD_GLOB
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/react/renderer/components/VectorIconsLucide/ComponentDescriptors.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/react/renderer/components/VectorIconsLucide/EventEmitters.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/react/renderer/components/VectorIconsLucide/Props.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/react/renderer/components/VectorIconsLucide/ShadowNodes.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/react/renderer/components/VectorIconsLucide/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
 # react_codegen_SRCS at /Users/tomhendra/Developer/tomkit/node_modules/@shopify/react-native-skia/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tomhendra/Developer/tomkit/node_modules/@shopify/react-native-skia/android/build/generated/source/codegen/jni/*.cpp")
 set(OLD_GLOB
@@ -54,6 +102,30 @@ set(OLD_GLOB
   "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/Props.cpp"
   "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/ShadowNodes.cpp"
   "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/RNCTabView-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/react/renderer/components/RNCTabView/*.cpp")
+set(OLD_GLOB
+  "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/react/renderer/components/RNCTabView/ComponentDescriptors.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/react/renderer/components/RNCTabView/EventEmitters.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/react/renderer/components/RNCTabView/Props.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/react/renderer/components/RNCTabView/ShadowNodes.cpp"
+  "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/react/renderer/components/RNCTabView/States.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

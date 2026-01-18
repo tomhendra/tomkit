@@ -54,7 +54,7 @@ function BouncingSquare() {
           translateY.value = withSpring(ty)
         }}
       >
-        <Icon name="dices" size={32} color={theme.colorInverseForeground} />
+        <Icon name="dices" size={32} color={theme.color.inverseForeground} />
       </Pressable>
     </Container>
   )
@@ -71,17 +71,17 @@ const styles = StyleSheet.create((t) => ({
   square: {
     height: SQUARE_SIZE,
     width: SQUARE_SIZE,
-    backgroundColor: t.colorInfo,
+    backgroundColor: t.color.info,
     borderCurve: 'continuous',
-    borderRadius: t.rounded4xl,
+    borderRadius: t.radius.round,
   },
   button: {
-    height: t.size16,
-    width: t.size16,
+    height: t.size(16),
+    width: t.size(16),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: t.colorPrimary,
-    borderRadius: t.rounded4xl,
+    backgroundColor: t.color.primary,
+    borderRadius: t.radius.round,
     position: 'absolute',
     bottom: 12,
     right: 12,

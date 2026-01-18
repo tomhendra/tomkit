@@ -1,30 +1,16 @@
 import '@/styles/unistyles'
 import 'react-native-gesture-handler'
 
-import {
-  type Theme,
-  NavigationContainer,
-  DarkTheme,
-  DefaultTheme,
-} from '@react-navigation/native'
+import { NavigationContainer } from '@react-navigation/native'
 import { useEffect } from 'react'
 import { StatusBar, useColorScheme } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import BootSplash from 'react-native-bootsplash'
 import { StyleSheet } from 'react-native-unistyles'
 
-import { NAV_THEME } from '@/styles/nav-theme'
+import { navigationThemes } from '@/styles/theme'
 import { RootNavigator } from '@/navigation'
 
-const LIGHT_THEME: Theme = {
-  ...DefaultTheme,
-  colors: NAV_THEME.light,
-}
-
-const DARK_THEME: Theme = {
-  ...DarkTheme,
-  colors: NAV_THEME.dark,
-}
 
 export default function App() {
   const colorScheme = useColorScheme()
@@ -41,7 +27,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <NavigationContainer theme={isDark ? DARK_THEME : LIGHT_THEME}>
+      <NavigationContainer theme={isDark ? navigationThemes.dark : navigationThemes.light}>
         <RootNavigator />
       </NavigationContainer>
     </GestureHandlerRootView>

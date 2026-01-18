@@ -1,52 +1,50 @@
 import { Text as RNText, type TextProps as RNTextProps } from 'react-native'
 import { StyleSheet } from 'react-native-unistyles'
 
-export type TextProps = RNTextProps & {
-  variant?: 'default' | 'title' | 'defaultSemiBold' | 'subtitle' | 'link'
+type Variant = 'body' | 'title' | 'subtitle' | 'caption' | 'link'
+
+type TextProps = RNTextProps & {
+  variant?: Variant
 }
 
-export function Text({ style, variant = 'default', ...rest }: TextProps) {
-  return (
-    <RNText
-      style={[
-        variant === 'default' ? styles.default : undefined,
-        variant === 'title' ? styles.title : undefined,
-        variant === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
-        variant === 'subtitle' ? styles.subtitle : undefined,
-        variant === 'link' ? styles.link : undefined,
-        style,
-      ]}
-      {...rest}
-    />
-  )
+function Text({ style, variant = 'body', ...rest }: TextProps) {
+  styles.useVariants({ variant })
+  return <RNText style={[styles.text, style]} {...rest} />
 }
+
+export { Text, type TextProps }
 
 const styles = StyleSheet.create((t) => ({
-  default: {
-    fontSize: t.fontSizeBase,
-    lineHeight: t.lineHeight6,
-    color: t.colorForeground,
-  },
-  defaultSemiBold: {
-    fontSize: t.fontSizeBase,
-    lineHeight: t.lineHeight6,
-    fontWeight: t.fontWeightSemibold,
-    color: t.colorForeground,
-  },
-  title: {
-    fontSize: t.fontSize3xl,
-    fontWeight: t.fontWeightBold,
-    lineHeight: t.lineHeight8,
-    color: t.colorForeground,
-  },
-  subtitle: {
-    fontSize: t.fontSize2xl,
-    fontWeight: t.fontWeightBold,
-    color: t.colorForeground,
-  },
-  link: {
-    lineHeight: t.lineHeight8,
-    fontSize: t.fontSizeBase,
-    color: t.colorAccentForeground,
+  text: {
+    fontFamily: t.font.regular,
+    color: t.color.foreground,
+    variants: {
+      variant: {
+        body: {
+          fontSize: t.fontSize.base,
+          lineHeight: t.fontSize.base * t.lineHeight.normal,
+        },
+        title: {
+          fontFamily: t.font.bold,
+          fontSize: t.fontSize.xxxl,
+          lineHeight: t.fontSize.xxxl * t.lineHeight.tight,
+        },
+        subtitle: {
+          fontFamily: t.font.semibold,
+          fontSize: t.fontSize.xxl,
+          lineHeight: t.fontSize.xxl * t.lineHeight.tight,
+        },
+        caption: {
+          fontSize: t.fontSize.sm,
+          lineHeight: t.fontSize.sm * t.lineHeight.normal,
+          color: t.color.mutedForeground,
+        },
+        link: {
+          fontSize: t.fontSize.base,
+          lineHeight: t.fontSize.base * t.lineHeight.normal,
+          color: t.color.primary,
+        },
+      },
+    },
   },
 }))

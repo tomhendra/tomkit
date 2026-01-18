@@ -43,10 +43,10 @@ function AnimationsNavigator() {
   return (
     <AnimationsDrawer.Navigator
       screenOptions={{
-        drawerActiveTintColor: theme.colorPrimary,
-        headerTintColor: theme.colorForeground,
-        headerStyle: { backgroundColor: theme.colorBackground },
-        drawerStyle: { backgroundColor: theme.colorBackground },
+        drawerActiveTintColor: theme.color.primary,
+        headerTintColor: theme.color.foreground,
+        headerStyle: { backgroundColor: theme.color.background },
+        drawerStyle: { backgroundColor: theme.color.background },
       }}
     >
       <AnimationsDrawer.Screen
@@ -69,10 +69,10 @@ function ComponentsNavigator() {
   return (
     <ComponentsDrawer.Navigator
       screenOptions={{
-        drawerActiveTintColor: theme.colorPrimary,
-        headerTintColor: theme.colorForeground,
-        headerStyle: { backgroundColor: theme.colorBackground },
-        drawerStyle: { backgroundColor: theme.colorBackground },
+        drawerActiveTintColor: theme.color.primary,
+        headerTintColor: theme.color.foreground,
+        headerStyle: { backgroundColor: theme.color.background },
+        drawerStyle: { backgroundColor: theme.color.background },
       }}
     >
       <ComponentsDrawer.Screen
@@ -90,9 +90,9 @@ export function RootNavigator() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: theme.colorPrimary,
-        tabBarInactiveTintColor: theme.colorSecondaryForeground,
-        tabBarStyle: { backgroundColor: theme.colorBackground },
+        tabBarActiveTintColor: theme.color.primary,
+        tabBarInactiveTintColor: theme.color.secondaryForeground,
+        tabBarStyle: { backgroundColor: theme.color.background },
         headerShown: false,
       }}
     >

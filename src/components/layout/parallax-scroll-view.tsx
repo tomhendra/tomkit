@@ -65,15 +65,15 @@ const styles = StyleSheet.create((t, rt) => ({
     paddingLeft: rt.insets.left,
   },
   header: {
-    height: t.size64,
+    height: t.size(64),
     overflow: 'hidden',
-    backgroundColor: t.colorAccent,
+    backgroundColor: t.color.accent,
   },
   content: {
     flex: 1,
-    gap: t.space4,
-    padding: t.space8,
+    gap: t.gap(4),
+    padding: t.space(8),
     overflow: 'hidden',
-    backgroundColor: t.colorBackground,
+    backgroundColor: t.color.background,
   },
 }))

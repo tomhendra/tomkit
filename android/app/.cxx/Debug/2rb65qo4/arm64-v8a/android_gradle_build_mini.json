@@ -1,7 +1,10 @@
 {
   "buildFiles": [
+    "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tomhendra/Developer/tomkit/node_modules/@shopify/react-native-skia/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tomhendra/Developer/tomkit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tomhendra/Developer/tomkit/node_modules/react-native-nitro-modules/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tomhendra/Developer/tomkit/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt",
@@ -28,8 +31,13 @@
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
-    "react_codegen_rnreanimated::@8afabad14bfffa3f8b9a": {
-      "artifactName": "react_codegen_rnreanimated",
+    "react_codegen_RNCTabView::@54948b52a0aeebf4e5a8": {
+      "artifactName": "react_codegen_RNCTabView",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "react_codegen_RNVectorIconsSpec::@479809fae146501fd34d": {
+      "artifactName": "react_codegen_RNVectorIconsSpec",
       "abi": "arm64-v8a",
       "runtimeFiles": []
     },
@@ -53,16 +61,6 @@
       "abi": "arm64-v8a",
       "runtimeFiles": []
     },
-    "react_codegen_rnscreens::@25bcbd507e98d3a854ad": {
-      "artifactName": "react_codegen_rnscreens",
-      "abi": "arm64-v8a",
-      "output": "/Users/tomhendra/Developer/tomkit/android/app/build/intermediates/cxx/Debug/2rb65qo4/obj/arm64-v8a/libreact_codegen_rnscreens.so",
-      "runtimeFiles": [
-        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so",
-        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
-        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/6a05fb52cb10a5389af1fdd69ddba6e7/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so"
-      ]
-    },
     "appmodules::@6890427a1f51a3e7e1df": {
       "artifactName": "appmodules",
       "abi": "arm64-v8a",
@@ -75,11 +73,6 @@
         "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
         "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so"
       ]
-    },
-    "react_codegen_NitroModulesSpec::@472a82f9c57d3d3b8644": {
-      "artifactName": "react_codegen_NitroModulesSpec",
-      "abi": "arm64-v8a",
-      "runtimeFiles": []
     },
     "react_codegen_rnskia::@376d8504f62839611b97": {
       "artifactName": "react_codegen_rnskia",
@@ -108,6 +101,31 @@
     },
     "react_codegen_TurboUnistyles::@4059c313f3e505963bcd": {
       "artifactName": "react_codegen_TurboUnistyles",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "react_codegen_VectorIconsLucide::@3a047b4a91b60d2a1b9e": {
+      "artifactName": "react_codegen_VectorIconsLucide",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "react_codegen_rnreanimated::@8afabad14bfffa3f8b9a": {
+      "artifactName": "react_codegen_rnreanimated",
+      "abi": "arm64-v8a",
+      "runtimeFiles": []
+    },
+    "react_codegen_rnscreens::@25bcbd507e98d3a854ad": {
+      "artifactName": "react_codegen_rnscreens",
+      "abi": "arm64-v8a",
+      "output": "/Users/tomhendra/Developer/tomkit/android/app/build/intermediates/cxx/Debug/2rb65qo4/obj/arm64-v8a/libreact_codegen_rnscreens.so",
+      "runtimeFiles": [
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/reactnative/libs/android.arm64-v8a/libreactnative.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/821ed4691798374e87941f1498513aad/transformed/react-android-0.83.1-debug/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/tomhendra/.gradle/caches/8.14.3/transforms/6a05fb52cb10a5389af1fdd69ddba6e7/transformed/fbjni-0.7.0/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so"
+      ]
+    },
+    "react_codegen_NitroModulesSpec::@472a82f9c57d3d3b8644": {
+      "artifactName": "react_codegen_NitroModulesSpec",
       "abi": "arm64-v8a",
       "runtimeFiles": []
     }

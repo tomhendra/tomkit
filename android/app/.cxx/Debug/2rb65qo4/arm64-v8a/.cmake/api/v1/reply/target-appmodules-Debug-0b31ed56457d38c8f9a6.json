@@ -198,6 +198,22 @@
 				},
 				{
 					"backtrace" : 4,
+					"path" : "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/."
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/get-image/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/."
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/Users/tomhendra/Developer/tomkit/node_modules/@react-native-vector-icons/lucide/android/build/generated/source/codegen/jni/react/renderer/components/VectorIconsLucide"
+				},
+				{
+					"backtrace" : 4,
 					"path" : "/Users/tomhendra/Developer/tomkit/node_modules/@shopify/react-native-skia/android/build/generated/source/codegen/jni/."
 				},
 				{
@@ -211,6 +227,14 @@
 				{
 					"backtrace" : 4,
 					"path" : "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bootsplash/android/build/generated/source/codegen/jni/react/renderer/components/RNBootSplashSpec"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/."
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/Users/tomhendra/Developer/tomkit/node_modules/react-native-bottom-tabs/android/build/generated/source/codegen/jni/react/renderer/components/RNCTabView"
 				},
 				{
 					"backtrace" : 4,
@@ -344,11 +368,23 @@
 	[
 		{
 			"backtrace" : 4,
+			"id" : "react_codegen_RNVectorIconsSpec::@479809fae146501fd34d"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "react_codegen_VectorIconsLucide::@3a047b4a91b60d2a1b9e"
+		},
+		{
+			"backtrace" : 4,
 			"id" : "react_codegen_rnskia::@376d8504f62839611b97"
 		},
 		{
 			"backtrace" : 4,
 			"id" : "react_codegen_RNBootSplashSpec::@05d5bd8b08339ce1ebaa"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "react_codegen_RNCTabView::@54948b52a0aeebf4e5a8"
 		},
 		{
 			"backtrace" : 4,
@@ -505,7 +541,25 @@
 				46,
 				47,
 				48,
-				49
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67
 			]
 		}
 	],
@@ -522,6 +576,78 @@
 			"compileGroupIndex" : 0,
 			"path" : "OnLoad.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir/RNVectorIconsSpec-generated.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir/react/renderer/components/RNVectorIconsSpec/ComponentDescriptors.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir/react/renderer/components/RNVectorIconsSpec/EventEmitters.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir/react/renderer/components/RNVectorIconsSpec/Props.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir/react/renderer/components/RNVectorIconsSpec/ShadowNodes.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir/react/renderer/components/RNVectorIconsSpec/States.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/VectorIconsLucide_autolinked_build/CMakeFiles/react_codegen_VectorIconsLucide.dir/VectorIconsLucide-generated.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/VectorIconsLucide_autolinked_build/CMakeFiles/react_codegen_VectorIconsLucide.dir/react/renderer/components/VectorIconsLucide/ComponentDescriptors.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/VectorIconsLucide_autolinked_build/CMakeFiles/react_codegen_VectorIconsLucide.dir/react/renderer/components/VectorIconsLucide/EventEmitters.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/VectorIconsLucide_autolinked_build/CMakeFiles/react_codegen_VectorIconsLucide.dir/react/renderer/components/VectorIconsLucide/Props.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/VectorIconsLucide_autolinked_build/CMakeFiles/react_codegen_VectorIconsLucide.dir/react/renderer/components/VectorIconsLucide/ShadowNodes.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/VectorIconsLucide_autolinked_build/CMakeFiles/react_codegen_VectorIconsLucide.dir/react/renderer/components/VectorIconsLucide/States.cpp.o",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
@@ -593,6 +719,42 @@
 			"backtrace" : 4,
 			"isGenerated" : true,
 			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNBootSplashSpec_autolinked_build/CMakeFiles/react_codegen_RNBootSplashSpec.dir/react/renderer/components/RNBootSplashSpec/States.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNCTabView_autolinked_build/CMakeFiles/react_codegen_RNCTabView.dir/RNCTabView-generated.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNCTabView_autolinked_build/CMakeFiles/react_codegen_RNCTabView.dir/react/renderer/components/RNCTabView/ComponentDescriptors.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNCTabView_autolinked_build/CMakeFiles/react_codegen_RNCTabView.dir/react/renderer/components/RNCTabView/EventEmitters.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNCTabView_autolinked_build/CMakeFiles/react_codegen_RNCTabView.dir/react/renderer/components/RNCTabView/Props.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNCTabView_autolinked_build/CMakeFiles/react_codegen_RNCTabView.dir/react/renderer/components/RNCTabView/ShadowNodes.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNCTabView_autolinked_build/CMakeFiles/react_codegen_RNCTabView.dir/react/renderer/components/RNCTabView/States.cpp.o",
 			"sourceGroupIndex" : 1
 		},
 		{

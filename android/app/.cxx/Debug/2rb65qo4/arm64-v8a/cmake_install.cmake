@@ -44,8 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNVectorIconsSpec_autolinked_build/cmake_install.cmake")
+  include("/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/VectorIconsLucide_autolinked_build/cmake_install.cmake")
   include("/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/rnskia_autolinked_build/cmake_install.cmake")
   include("/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNBootSplashSpec_autolinked_build/cmake_install.cmake")
+  include("/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/RNCTabView_autolinked_build/cmake_install.cmake")
   include("/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/rngesturehandler_codegen_autolinked_build/cmake_install.cmake")
   include("/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/NitroModulesSpec_autolinked_build/cmake_install.cmake")
   include("/Users/tomhendra/Developer/tomkit/android/app/.cxx/Debug/2rb65qo4/arm64-v8a/rnreanimated_autolinked_build/cmake_install.cmake")

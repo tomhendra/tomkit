@@ -27,17 +27,17 @@ function HomeScreen() {
 
 const styles = StyleSheet.create((t) => ({
   title: {
-    paddingVertical: t.space2,
+    paddingVertical: t.space(2),
   },
   list: {
-    gap: t.space4,
-    marginBottom: t.space2,
+    gap: t.gap(4),
+    marginBottom: t.space(2),
   },
   logo: {
     position: 'absolute',
     height: 178,
     width: 290,
-    bottom: t.space0,
+    bottom: 0,
   },
 }))
 

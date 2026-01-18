@@ -10,11 +10,11 @@ export { Container }
 const styles = StyleSheet.create((t, rt) => ({
   wrapper: {
     flex: 1,
-    paddingTop: t.space8,
-    paddingRight: rt.insets.right + t.space8,
+    paddingTop: t.space(8),
+    paddingRight: rt.insets.right + t.space(8),
     paddingBottom: rt.insets.bottom,
-    paddingLeft: rt.insets.left + t.space8,
-    backgroundColor: t.colorBackground,
+    paddingLeft: rt.insets.left + t.space(8),
+    backgroundColor: t.color.background,
   },
   container: {
     flex: 1,
