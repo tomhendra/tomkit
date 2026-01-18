@@ -2,9 +2,9 @@ import type { PropsWithChildren, ReactElement } from 'react'
 import { View } from 'react-native'
 import Animated, {
   interpolate,
-  useAnimatedRef,
+  useAnimatedScrollHandler,
   useAnimatedStyle,
-  useScrollViewOffset,
+  useSharedValue,
 } from 'react-native-reanimated'
 import { StyleSheet } from 'react-native-unistyles'
 
@@ -15,8 +15,12 @@ type Props = PropsWithChildren<{
 }>
 
 function ParallaxScrollView({ children, headerImage }: Props) {
-  const scrollRef = useAnimatedRef<Animated.ScrollView>()
-  const scrollOffset = useScrollViewOffset(scrollRef)
+  const scrollOffset = useSharedValue(0)
+  const scrollHandler = useAnimatedScrollHandler({
+    onScroll: (event) => {
+      scrollOffset.value = event.contentOffset.y
+    },
+  })
 
   const headerAnimatedStyle = useAnimatedStyle(() => {
     return {
@@ -41,7 +45,7 @@ function ParallaxScrollView({ children, headerImage }: Props) {
 
   return (
     <View style={styles.wrapper}>
-      <Animated.ScrollView ref={scrollRef} scrollEventThrottle={16}>
+      <Animated.ScrollView onScroll={scrollHandler} scrollEventThrottle={16}>
         <Animated.View style={[styles.header, headerAnimatedStyle]}>
           {headerImage}
         </Animated.View>
