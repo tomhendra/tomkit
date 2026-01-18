@@ -1,4 +1,3 @@
-import { Container } from '@/components/layout/container'
 import Icon from '@react-native-vector-icons/lucide'
 import { Pressable, View } from 'react-native'
 import Animated, {
@@ -8,6 +7,8 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated'
 import { StyleSheet, useUnistyles } from 'react-native-unistyles'
+
+import { Container } from '@/components/layout/container'
 
 const SQUARE_SIZE = 120
 
@@ -83,7 +84,7 @@ const styles = StyleSheet.create((t) => ({
     backgroundColor: t.color.primary,
     borderRadius: t.radius.round,
     position: 'absolute',
-    bottom: 12,
-    right: 12,
+    bottom: t.space(3),
+    right: t.space(3),
   },
 }))

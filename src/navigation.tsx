@@ -1,11 +1,13 @@
+import Icon from '@react-native-vector-icons/lucide'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
-import Icon from '@react-native-vector-icons/lucide'
 import { useUnistyles } from 'react-native-unistyles'
+
+import { TextScreen } from './features/components/text-screen'
+
 import { BouncingSquare } from '@/features/animations/bouncing-square'
 import { PanGestures } from '@/features/animations/pan-gestures'
 import { HomeScreen } from '@/features/home/home-screen'
-import { TextScreen } from './features/components/text-screen'
 
 export type TabParamList = {
   HomeTab: undefined
@@ -38,15 +40,15 @@ const ComponentsIcon = ({ color }: { color: string }) => (
 )
 
 function AnimationsNavigator() {
-  const { theme } = useUnistyles()
+  const { theme: t } = useUnistyles()
 
   return (
     <AnimationsDrawer.Navigator
       screenOptions={{
-        drawerActiveTintColor: theme.color.primary,
-        headerTintColor: theme.color.foreground,
-        headerStyle: { backgroundColor: theme.color.background },
-        drawerStyle: { backgroundColor: theme.color.background },
+        drawerActiveTintColor: t.color.primary,
+        headerTintColor: t.color.foreground,
+        headerStyle: { backgroundColor: t.color.background },
+        drawerStyle: { backgroundColor: t.color.background },
       }}
     >
       <AnimationsDrawer.Screen
@@ -64,15 +66,15 @@ function AnimationsNavigator() {
 }
 
 function ComponentsNavigator() {
-  const { theme } = useUnistyles()
+  const { theme: t } = useUnistyles()
 
   return (
     <ComponentsDrawer.Navigator
       screenOptions={{
-        drawerActiveTintColor: theme.color.primary,
-        headerTintColor: theme.color.foreground,
-        headerStyle: { backgroundColor: theme.color.background },
-        drawerStyle: { backgroundColor: theme.color.background },
+        drawerActiveTintColor: t.color.primary,
+        headerTintColor: t.color.foreground,
+        headerStyle: { backgroundColor: t.color.background },
+        drawerStyle: { backgroundColor: t.color.background },
       }}
     >
       <ComponentsDrawer.Screen
@@ -85,14 +87,14 @@ function ComponentsNavigator() {
 }
 
 export function RootNavigator() {
-  const { theme } = useUnistyles()
+  const { theme: t } = useUnistyles()
 
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: theme.color.primary,
-        tabBarInactiveTintColor: theme.color.secondaryForeground,
-        tabBarStyle: { backgroundColor: theme.color.background },
+        tabBarActiveTintColor: t.color.primary,
+        tabBarInactiveTintColor: t.color.secondaryForeground,
+        tabBarStyle: { backgroundColor: t.color.background },
         headerShown: false,
       }}
     >

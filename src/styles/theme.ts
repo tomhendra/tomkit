@@ -1,4 +1,3 @@
-import { Theme } from '@react-navigation/native'
 import {
   blue,
   blueDark,
@@ -11,6 +10,8 @@ import {
   yellow,
   yellowDark,
 } from '@radix-ui/colors'
+
+import type { Theme } from '@react-navigation/native'
 
 // Raw color palette from Radix
 const colors = {

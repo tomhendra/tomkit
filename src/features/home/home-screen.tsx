@@ -1,7 +1,8 @@
-import { ParallaxScrollView } from '@/components/layout/parallax-scroll-view'
-import { Text } from '@/components/ui/text'
 import { Image, View } from 'react-native'
 import { StyleSheet } from 'react-native-unistyles'
+
+import { ParallaxScrollView } from '@/components/layout/parallax-scroll-view'
+import { Text } from '@/components/ui/text'
 
 function HomeScreen() {
   return (

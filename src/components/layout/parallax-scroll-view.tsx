@@ -1,4 +1,3 @@
-import type { PropsWithChildren, ReactElement } from 'react'
 import { View } from 'react-native'
 import Animated, {
   interpolate,
@@ -7,6 +6,8 @@ import Animated, {
   useSharedValue,
 } from 'react-native-reanimated'
 import { StyleSheet } from 'react-native-unistyles'
+
+import type { PropsWithChildren, ReactElement } from 'react'
 
 const HEADER_HEIGHT = 250
 
