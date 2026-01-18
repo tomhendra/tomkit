@@ -13,7 +13,7 @@ import { Container } from '@/components/layout/container'
 const SQUARE_SIZE = 120
 
 function BouncingSquare() {
-  const { theme } = useUnistyles()
+  const { theme: t } = useUnistyles()
 
   const scale = useSharedValue(1)
   const rotate = useSharedValue(0)
@@ -55,7 +55,7 @@ function BouncingSquare() {
           translateY.value = withSpring(ty)
         }}
       >
-        <Icon name="dices" size={32} color={theme.color.inverseForeground} />
+        <Icon name="dices" size={32} color={t.color.inverseForeground} />
       </Pressable>
     </Container>
   )
