@@ -1,24 +1,28 @@
-import { Text } from '@/components/ui/text'
 import { View } from 'react-native'
 import { StyleSheet } from 'react-native-unistyles'
 
-function ComponentsScreen() {
+function TextScreen() {
   return (
-    <View style={styles.container}>
-      <Text type="title">Components</Text>
+    <View style={styles.wrapper}>
+      <View style={styles.container} />
     </View>
   )
 }
 
+export { TextScreen }
+
 const styles = StyleSheet.create((t, rt) => ({
-  container: {
+  wrapper: {
     flex: 1,
-    paddingTop: rt.insets.top + t.space8,
+    paddingTop: t.space8,
     paddingRight: rt.insets.right + t.space8,
     paddingBottom: rt.insets.bottom,
     paddingLeft: rt.insets.left + t.space8,
     backgroundColor: t.colorBackground,
   },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 }))
-
-export { ComponentsScreen }

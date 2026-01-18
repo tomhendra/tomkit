@@ -14,7 +14,7 @@ type Props = PropsWithChildren<{
   headerImage: ReactElement
 }>
 
-export default function ParallaxScrollView({ children, headerImage }: Props) {
+function ParallaxScrollView({ children, headerImage }: Props) {
   const scrollRef = useAnimatedRef<Animated.ScrollView>()
   const scrollOffset = useScrollViewOffset(scrollRef)
 
@@ -40,7 +40,7 @@ export default function ParallaxScrollView({ children, headerImage }: Props) {
   })
 
   return (
-    <View style={styles.container}>
+    <View style={styles.wrapper}>
       <Animated.ScrollView ref={scrollRef} scrollEventThrottle={16}>
         <Animated.View style={[styles.header, headerAnimatedStyle]}>
           {headerImage}
@@ -51,8 +51,10 @@ export default function ParallaxScrollView({ children, headerImage }: Props) {
   )
 }
 
+export { ParallaxScrollView }
+
 const styles = StyleSheet.create((t, rt) => ({
-  container: {
+  wrapper: {
     flex: 1,
     paddingTop: rt.insets.top,
     paddingRight: rt.insets.right,

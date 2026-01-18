@@ -2,18 +2,18 @@ import { Text as RNText, type TextProps as RNTextProps } from 'react-native'
 import { StyleSheet } from 'react-native-unistyles'
 
 export type TextProps = RNTextProps & {
-  type?: 'default' | 'title' | 'defaultSemiBold' | 'subtitle' | 'link'
+  variant?: 'default' | 'title' | 'defaultSemiBold' | 'subtitle' | 'link'
 }
 
-export function Text({ style, type = 'default', ...rest }: TextProps) {
+export function Text({ style, variant = 'default', ...rest }: TextProps) {
   return (
     <RNText
       style={[
-        type === 'default' ? styles.default : undefined,
-        type === 'title' ? styles.title : undefined,
-        type === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
-        type === 'subtitle' ? styles.subtitle : undefined,
-        type === 'link' ? styles.link : undefined,
+        variant === 'default' ? styles.default : undefined,
+        variant === 'title' ? styles.title : undefined,
+        variant === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
+        variant === 'subtitle' ? styles.subtitle : undefined,
+        variant === 'link' ? styles.link : undefined,
         style,
       ]}
       {...rest}

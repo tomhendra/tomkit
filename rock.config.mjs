@@ -10,4 +10,5 @@ export default {
     ios: platformIOS(),
     android: platformAndroid(),
   },
+  remoteCacheProvider: null,
 }

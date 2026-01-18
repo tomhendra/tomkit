@@ -1,15 +1,12 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createDrawerNavigator } from '@react-navigation/drawer'
-import { Component, House, Sparkles } from 'lucide-react-native'
+import Icon from '@react-native-vector-icons/lucide'
 import { useUnistyles } from 'react-native-unistyles'
-
 import { BouncingSquare } from '@/features/animations/bouncing-square'
 import { PanGestures } from '@/features/animations/pan-gestures'
-import { Boilerplate } from '@/features/animations/boilerplate'
-import { ComponentsScreen } from '@/features/components/components-screen'
 import { HomeScreen } from '@/features/home/home-screen'
+import { TextScreen } from './features/components/text-screen'
 
-// Param lists
 export type TabParamList = {
   HomeTab: undefined
   AnimationsTab: undefined
@@ -23,12 +20,22 @@ export type AnimationsDrawerParamList = {
 }
 
 export type ComponentsDrawerParamList = {
-  ComponentsOverview: undefined
+  Text: undefined
 }
 
 const Tab = createBottomTabNavigator<TabParamList>()
 const AnimationsDrawer = createDrawerNavigator<AnimationsDrawerParamList>()
 const ComponentsDrawer = createDrawerNavigator<ComponentsDrawerParamList>()
+
+const HomeIcon = ({ color }: { color: string }) => (
+  <Icon name="house" size={24} color={color} />
+)
+const AnimationsIcon = ({ color }: { color: string }) => (
+  <Icon name="sparkles" size={24} color={color} />
+)
+const ComponentsIcon = ({ color }: { color: string }) => (
+  <Icon name="component" size={24} color={color} />
+)
 
 function AnimationsNavigator() {
   const { theme } = useUnistyles()
@@ -52,11 +59,6 @@ function AnimationsNavigator() {
         component={PanGestures}
         options={{ title: 'Pan Gestures' }}
       />
-      <AnimationsDrawer.Screen
-        name="Boilerplate"
-        component={Boilerplate}
-        options={{ title: 'Boilerplate' }}
-      />
     </AnimationsDrawer.Navigator>
   )
 }
@@ -74,9 +76,9 @@ function ComponentsNavigator() {
       }}
     >
       <ComponentsDrawer.Screen
-        name="ComponentsOverview"
-        component={ComponentsScreen}
-        options={{ title: 'Overview' }}
+        name="Text"
+        component={TextScreen}
+        options={{ title: 'Text' }}
       />
     </ComponentsDrawer.Navigator>
   )
@@ -97,7 +99,7 @@ export function RootNavigator() {
         component={HomeScreen}
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <House color={color} size={24} />,
+          tabBarIcon: HomeIcon,
         }}
       />
       <Tab.Screen
@@ -105,7 +107,7 @@ export function RootNavigator() {
         component={AnimationsNavigator}
         options={{
           title: 'Animations',
-          tabBarIcon: ({ color }) => <Sparkles color={color} size={24} />,
+          tabBarIcon: AnimationsIcon,
         }}
       />
       <Tab.Screen
@@ -113,7 +115,7 @@ export function RootNavigator() {
         component={ComponentsNavigator}
         options={{
           title: 'Components',
-          tabBarIcon: ({ color }) => <Component color={color} size={24} />,
+          tabBarIcon: ComponentsIcon,
         }}
       />
     </Tab.Navigator>

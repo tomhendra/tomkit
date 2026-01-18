@@ -1,5 +1,4 @@
-import { Text } from '@/components/ui/text'
-import { Dices } from 'lucide-react-native'
+import Icon from '@react-native-vector-icons/lucide'
 import { Pressable, View } from 'react-native'
 import Animated, {
   useAnimatedStyle,
@@ -31,9 +30,8 @@ function BouncingSquare() {
   }, [])
 
   return (
-    <View style={styles.container}>
-      <Text type="title">Bouncing Square</Text>
-      <View style={styles.body}>
+    <View style={styles.wrapper}>
+      <View style={styles.container}>
         <Animated.View
           onTouchStart={() => {
             scale.value = withTiming(1.2)
@@ -54,23 +52,25 @@ function BouncingSquare() {
             translateY.value = withSpring(ty)
           }}
         >
-          <Dices size={32} color={theme.colorInverseForeground} />
+          <Icon name="dices" size={32} color={theme.colorInverseForeground} />
         </Pressable>
       </View>
     </View>
   )
 }
 
+export { BouncingSquare }
+
 const styles = StyleSheet.create((t, rt) => ({
-  container: {
+  wrapper: {
     flex: 1,
-    paddingTop: rt.insets.top + t.space8,
+    paddingTop: t.space8,
     paddingRight: rt.insets.right + t.space8,
     paddingBottom: rt.insets.bottom,
     paddingLeft: rt.insets.left + t.space8,
     backgroundColor: t.colorBackground,
   },
-  body: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -94,5 +94,3 @@ const styles = StyleSheet.create((t, rt) => ({
     right: 0,
   },
 }))
-
-export { BouncingSquare }
